@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+
 * {
     padding:0;
     margin:0;
     box-sizing:border-box;
 
 }
+
 
 h1 {
     font-size: 28px;
@@ -16,11 +19,12 @@ h1 {
 
 
 .container {
-    max-width: 1280px;
     margin:auto 0;
+    max-width: 100%;
     display:flex;
     align-items: center;
     justify-content: space-between;
+    height:50px
 }
 
 nav {
@@ -41,9 +45,36 @@ nav {
     display: block;
     position:relative;
     z-index:1;
-
+    width:30px;
+    height:30px;
+    background-color: transparent;
 
 }
+
+span {
+    display: block;
+    width:30px;
+    height:3px;
+    background-color: #fff;
+    margin:4px 0;
+    border-radius: 3px;
+}
+
+.hamburgare:hover span:nth-child(1) {
+    background-color: #fca311;
+
+}
+
+.hamburgare:hover span:nth-child(2) {
+    background-color: #eb5e28;
+}
+
+.hamburgare:hover span:nth-child(3) {
+    background-color: #fca311;
+}
+
+
+
 
 
 .meny {
@@ -59,33 +90,71 @@ nav {
 }
 
 .meny a:hover {
-    color:#fca311
+    color: #fca311;
 }
 
 
 
 .video {
-    width:100%;
     position: absolute;
-    right:0;
-
+    left:0;
+    width:100%;
+    z-index: -1;
+    height:100vh;
+    object-fit: fill;
+    
 }
 
 
 
 #videotext{
-    color:#FFF;
+    color:#fca311;
+    font-family: 'Merienda', cursive;
+    font-weight: 700;
+    text-shadow: 7px 5px 2px #14213d;
     position: absolute;
-    top:50%;
+    top:70%;
     left:50%;
-    transform:translate(-50%, -50%)
+    transform:translate(-50%, -50%);
+    font-size: 35px;
+
+
 }
 
 
 
-@media (max-width:787px) {
-    .menu {
+@media (min-width:787px) {
+    .hamburgare {
         display:none
     }
+
+   
+}
+
+@media (max-width:787px) {
+    .meny {
+        display:none
+    }
+    .hamburgare {
+        display:block
+    }
+
+    .video {
+        display:none
+    }
+    .bakgrunds-bild {
+        background-image: url(bakgrundsbild.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        height:100vh
+    }
+
+    #videotext {
+        color:#14213d;
+        text-shadow: 7px 5px 6px #eb5e28;
+
+    }
+
+
 
 }
