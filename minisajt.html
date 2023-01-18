@@ -11,46 +11,101 @@
       crossorigin="anonymous"
     ></script>
   </head>
+  <link rel="shortcut icon" href="Daco_1775678.png" type="image/x-icon" />
   <body>
-
-
-
     <nav>
       <div class="container">
-<h1>CookingDo</h1>
-<div class="meny">
-<a href="#">Home</a>
-<a href="#">Recept</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
-</div>
+        <h1>CookingDo</h1>
+        <div class="meny">
+          <a class="link" href="#home">Home</a>
+          <a class="link" href="#recept">Recept</a>
+          <a class="link" href="formulär.html" target="_blank">Formulär</a>
+          <a class="link" href="#about">About us</a>
+        </div>
 
-<button class="hamburgare">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
-</div>
-
+        <div class="hamburgare">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
     </nav>
 
+    <video autoplay muted loop class="video">
+      <source src="matvideo_AdobeExpress.mp4" type="video/mp4" />
+    </video>
 
+    <h1 id="home"></h1>
 
-</div>
-
-
-<video autoplay muted loop class="video" >
-  <source src="matvideo_AdobeExpress.mp4" type="video/mp4">
-  
-  </video>
-  
-  
     <h2 id="videotext">Unleash Your Inner Cooking Demon</h2>
-  
 
-  <div class="bakgrunds-bild">
+    <div class="bakgrunds-bild"></div>
 
-  </div>
+    <div id="container">
+      <h4 id="recept"></h4>
+      <div class="box">
+        <img class="mat-bild" src="kycklinggryta.jpg" alt="" />
+        <span class="fa-stack fa-2x">
+          <i class="fa-solid fa-circle fa-stack-2x"></i>
+          <i class="fa-solid fa-1 fa-stack-1x fa-inverse"></i>
+        </span>
 
+        <h2>kycklinggryta</h2>
+        <a class="länktext" href="recept.html" target="_blank">Gör så här</a>
+      </div>
+      <div class="box">
+        <img class="mat-bild" src="köttgryta.jfif" alt="" />
+        <span class="fa-stack fa-2x">
+          <i class="fa-solid fa-circle fa-stack-2x"></i>
+          <i class="fa-solid fa-2 fa-stack-1x fa-inverse"></i>
+        </span>
+
+        <h2>Köttgryta</h2>
+        <a class="länktext" href="köttgryta.html" target="_blank">Gör så här</a>
+      </div>
+
+      <div class="box">
+        <img class="mat-bild" src="vegetarisk.jpeg" alt="" />
+        <span class="fa-stack fa-2x">
+          <i class="fa-solid fa-circle fa-stack-2x"></i>
+          <i class="fa-solid fa-3 fa-stack-1x fa-inverse"></i>
+        </span>
+
+        <h2>Vegetarisk Stroganoff</h2>
+        <a class="länktext" href="vegetarisk.html" target="_blank"
+          >Gör så här</a
+        >
+      </div>
+    </div>
+
+    <footer>
+      <div class="content">
+        <h3 id="footer-h3">CookingDo</h3>
+        <p>
+          CookingDo är en hemsida som lär dig att laga god och nyttig mat för
+          ett bra pris!
+        </p>
+        <ul class="socials">
+          <li>
+            <a href="https://www.facebook.com/CookingChannel/" target="_blank"
+              ><i class="fa fa-facebook" target="_blank"></i
+            ></a>
+
+            <a href="https://twitter.com/cobratate" target="_blank"
+              ><i class="fa fa-twitter"></i
+            ></a>
+
+            <a href="https://www.instagram.com/buzzfeedtasty/" target="_blank"
+              ><i class="fa fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div id="about">
+        <p>gott - nyttigt - billigt</p>
+      </div>
+    </footer>
+
+    <script src="huvudsida.js"></script>
   </body>
 </html>
