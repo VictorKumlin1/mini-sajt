@@ -1,160 +1,297 @@
-@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merienda&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rowdies:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
 
 * {
-    padding:0;
-    margin:0;
-    box-sizing:border-box;
-
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+body {
+  scroll-behavior: smooth;
+  background-color: #333533;
+}
 
 h1 {
-    font-size: 28px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color:#FFF;
-
+  font-size: 28px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
 }
 
-
 .container {
-    margin:auto 0;
-    max-width: 100%;
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    height:50px
+  margin: auto 0;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
 }
 
 nav {
-    position: fixed;
-    top:0;
-    left:0;
-    right:0;
-    z-index: 99;
-    padding:16px 32px;
-    border-bottom: 6px ridge #fca311;
-    background-color: #212529;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  padding: 16px 32px;
+  border-bottom: 6px ridge #fca311;
+  background-color: #212529;
 }
-
-
 
 .hamburgare {
-    display: block;
-    position:relative;
-    z-index:1;
-    width:30px;
-    height:30px;
-    background-color: transparent;
-
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
 }
 
-span {
-    display: block;
-    width:30px;
-    height:3px;
-    background-color: #fff;
-    margin:4px 0;
-    border-radius: 3px;
+.bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  border-radius: 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .hamburgare:hover span:nth-child(1) {
-    background-color: #fca311;
-
+  background-color: #fca311;
 }
 
 .hamburgare:hover span:nth-child(2) {
-    background-color: #eb5e28;
+  background-color: #eb5e28;
 }
 
 .hamburgare:hover span:nth-child(3) {
-    background-color: #fca311;
+  background-color: #fca311;
 }
 
-
-
-
-
 .meny {
-    justify-content: flex-end   ;
-    margin:0 -16px
+  justify-content: flex-end;
+  margin: 0 -16px;
 }
 
 .meny a {
-    color:#fff;
-    margin:0 16px;
-    text-decoration: none;
-    padding:8px 16px
+  color: #fff;
+  margin: 0 16px;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-family: "Merriweather", serif;
 }
 
 .meny a:hover {
-    color: #fca311;
+  color: #fca311;
 }
 
-
-
-.video {
-    position: absolute;
-    left:0;
-    width:100%;
-    z-index: -1;
-    height:100vh;
-    object-fit: fill;
-    
+video {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: fill;
 }
 
-
-
-#videotext{
-    color:#fca311;
-    font-family: 'Merienda', cursive;
-    font-weight: 700;
-    text-shadow: 7px 5px 2px #14213d;
-    position: absolute;
-    top:70%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    font-size: 35px;
-
-
+#videotext {
+  color: #fca311;
+  font-family: "Merienda", cursive;
+  font-weight: 700;
+  text-shadow: 7px 5px 2px #14213d;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 35px;
 }
 
-
-
-@media (min-width:787px) {
-    .hamburgare {
-        display:none
-    }
-
-   
+#container {
+  width: 100%;
+  height: 400px;
+  background-color: transparent;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  padding-top: 750px;
 }
 
-@media (max-width:787px) {
-    .meny {
-        display:none
-    }
-    .hamburgare {
-        display:block
-    }
+.box {
+  width: 33%;
+  height: 350px;
+  box-shadow: 5px 5px 10px #000;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #4c5c68;
+  font-family: "Rowdies", cursive;
+  color: #de9e36;
+  position: relative;
+  width: 30%;
+}
 
-    .video {
-        display:none
-    }
-    .bakgrunds-bild {
-        background-image: url(bakgrundsbild.jpg);
-        background-attachment: fixed;
-        background-size: cover;
-        height:100vh
-    }
+.länktext {
+  color: #ffd100;
+  font-family: "Satisfy", cursive;
+  font-size: 25px;
+  text-decoration: none;
+}
 
-    #videotext {
-        color:#14213d;
-        text-shadow: 7px 5px 6px #eb5e28;
+.mat-bild {
+  width: 100%;
+  height: 200px;
+  display: flex;
+}
 
-    }
+.fa-stack {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
 
+footer {
+  color: #fff;
+  width: 100%;
+  padding-top: 500px;
+  font-family: "Merriweather", serif;
+}
 
+.content h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+}
 
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 14px;
+  background: #212529;
+  height: auto;
+}
+
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.socials li {
+  padding: 0 10px;
+}
+
+.socials a i {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 0 25px;
+  transition: color 0.6s ease;
+}
+
+.socials a:hover i {
+  color: #007200;
+}
+
+#about {
+  background: #007200;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 14px;
+  text-align: center;
+}
+
+#home {
+  position: absolute;
+  top: 0;
+}
+
+#recept {
+  position: absolute;
+  top: 560px;
+}
+
+@media (min-width: 787px) {
+  .hamburgare {
+    display: none;
+  }
+}
+
+@media (max-width: 787px) {
+  .bakgrunds-bild {
+    background-image: url(bakgrundsbild.jpg);
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .meny {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #212529;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    margin: 16px 0;
+  }
+
+  #container {
+    padding-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  #recept {
+    top: 525px;
+  }
+
+  .meny.active {
+    left: 0;
+  }
+
+  .hamburgare {
+    display: block;
+  }
+
+  .hamburgare.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburgare.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburgare.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .video {
+    display: none;
+  }
+
+  #videotext {
+    color: #14213d;
+    text-shadow: 7px 5px 6px #eb5e28;
+    z-index: 1;
+  }
+
+  footer {
+    width: 100%;
+    padding-top: 50px;
+  }
 }
